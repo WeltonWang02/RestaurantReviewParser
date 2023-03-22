@@ -32,6 +32,21 @@ To start:
 
 ```python3 app.py```
 
+## Usage
+
+```Method: POST 
+Endpoint: /api/v1/fetch/
+Body: {"location": "<location slug>"}
+
+<location slug> = Google Maps location ID. Formats:
+472717649119152494
+https://www.google.com/maps?cid=472717649119152494
+https://maps.google.com/maps?cid=472717649119152494
+ChIJx0JMBTFV2YARbgnOgjJujwY
+https://www.google.com/maps/place/The+Cheesecake+Factory/@32.76918,-117.1677887,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x68f6e3282ce096e!8m2!3d32.76918!4d-117.1656
+0x68f6e3282ce096e
+```
+
 ## Cost
 
 Zembra API Cost: $0.06 + $0.12/100 reviews
