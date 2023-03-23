@@ -1,6 +1,8 @@
 from gensim.models import KeyedVectors
 from sanic import Sanic
 from sanic import response
+from dotenv import load_dotenv
+load_dotenv()
 from sanic.exceptions import SanicException, ServerError, NotFound
 from reviews import *
 import os
