@@ -6,6 +6,8 @@ load_dotenv()
 from sanic.exceptions import SanicException, ServerError, NotFound
 from reviews import *
 import os
+from sanic.worker.manager import WorkerManager
+WorkerManager.THRESHOLD = 1000
 
 model = KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin', binary=True)
 
