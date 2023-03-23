@@ -9,8 +9,8 @@ import json
 from scipy import spatial
 import numpy as np
 
-openai.api_key = os.environ("OPENAI_API")
-API_KEY = os.environ("ZEMBRA_API")
+openai.api_key = os.environ["OPENAI_API"]
+API_KEY = os.environ["ZEMBRA_API"]
 
 class Restaurant():
 
