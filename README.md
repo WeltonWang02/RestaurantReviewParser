@@ -14,7 +14,7 @@ Extension of BetterFoodRecs
 Pre-requisites
 
 ```bash
-pip3 install unidecode openai gdown gensim Sanic
+pip3 install unidecode openai gdown gensim Sanic python-dotenv
 gdown https://drive.google.com/uc?id=0B7XkCwpI5KDYNlNUTTlSS21pQmM
 gzip -d GoogleNews-vectors-negative300.bin.gz
 ```
