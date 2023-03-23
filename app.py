@@ -38,5 +38,5 @@ async def manage_not_found(request, exception):
 if __name__ == "__main__":
     app.run(
         host='0.0.0.0',
-        port=os.environ['PORT'],
+        port=int(os.environ['PORT']),
     )
