@@ -28,7 +28,8 @@ async def analysis(request):
         pred.fetch_reviews(int(os.environ['REVIEW_COUNT']))
         pred.process_review_data()
         res = pred.return_rankings()
-        return response.json({'response':"Success", "list":res})
+        parsed_data = [(x[0], x[1]['agg'], x[1]['matches']) for x in res]
+        return response.json({'response':"Success", "list":parsed_data})
     else:
         return response.json({"response":"Invalid response method"})
 
