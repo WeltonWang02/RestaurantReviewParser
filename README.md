@@ -50,7 +50,9 @@ https://www.google.com/maps/place/The+Cheesecake+Factory/@32.76918,-117.1677887,
 ## Cost
 
 Zembra API Cost: $0.06 + $0.12/100 reviews
+
 OpenAI API Cost: ~ $0.14/100 reviews
+
 Total Cost/Request (400 review default): ~$1
 
 *Reducing costs: Instead of text-davinci-003, a lower-powered GPT model can be used to lower review parsing costs.* 
