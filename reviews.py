@@ -89,7 +89,10 @@ class Restaurant():
       frequency_penalty=0,
       presence_penalty=0
     )
-    return json.loads(response['choices'][0]['text'])
+    try:
+      return json.loads(response['choices'][0]['text'])
+    except:
+      return [] # json decode error
 
   def vectorize(self, text):
     """
