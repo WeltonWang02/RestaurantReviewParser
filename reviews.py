@@ -8,6 +8,7 @@ import os
 import json
 from scipy import spatial
 import numpy as np
+from nltk.stem.lancaster import LancasterStemmer
 
 openai.api_key = os.environ["OPENAI_API"]
 API_KEY = os.environ["ZEMBRA_API"]
@@ -147,10 +148,12 @@ class Restaurant():
     computed_vectors = {}
     final_rankings = {}
     added_keys = []
+    st = LancasterStemmer()
 
     for entree, ratings in lst.items():
       try:
-        ratings['vec'] = self.vectorize(entree)
+        entree_s = " ".join([st.stem(x) for x in entree.split(" ")])
+        ratings['vec'] = self.vectorize(entree_s) # tense corrected version (will be combined with all roots below).
         computed_vectors[entree] = ratings
       except:
         # unknown vector -> results in partial computation
